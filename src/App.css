@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: 909090;
 }
 
 .App-logo {
@@ -14,20 +15,26 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #909090;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
   color: #61dafb;
 }
-
+.Catalog {
+  background-color: rgb(255, 255, 255);
+  width: 390px;
+  height: 100px;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +42,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.button1{
+  vertical-align : top;
+  background-color: #909090;
+  width: 150px;
+  height: 50px;
+}
+
+.realDew{
+  width: 39px;
+  height: 59px;
 }

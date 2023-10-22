@@ -1,3 +1,4 @@
+/*
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,6 +19,26 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>
+  );
+}
+
+export default App;
+*/
+import React from 'react';
+import './App.css';
+import TopComponent from './TopComponent';
+import BottomComponent from './BottomComponent';
+import MainComponent from './MainComponent';
+
+function App() {
+  return(
+    <div className="App">
+      <TopComponent />
+      <hr className="hr1"></hr>
+      <MainComponent />
+      <BottomComponent />
+
     </div>
   );
 }
