@@ -1,18 +1,26 @@
 import React from 'react';
 import Catalog from './Catalog';
-
-const clickButton = () => {
-    document.location.href('/drink/Order2')
-}
+import { useNavigate } from 'react-router-dom';
 
 function MainComponent() {
+    const navigate = useNavigate();
+
+    const clickButton = () => {
+        // 페이지 이동
+        navigate('./Detial'); // Detial 페이지로 이동
+    };
+
     return (
         <div>
-            <header className="App-header">
-            <button onclick={clickButton} className="button1">주문하기</button>
-            <h1>메인 컴포넌트</h1>
+        <div>
+            <h1>
+            <button className='button1' onClick={clickButton}>주문하기</button>
             <Catalog />
-            </header>
+            </h1>
+        </div>
+        <div>
+            <h1>second</h1>
+            </div>
         </div>
     );
 }

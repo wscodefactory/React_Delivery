@@ -25,22 +25,26 @@ function App() {
 
 export default App;
 */
-import React from 'react';
+
+import React, { Component } from 'react';
 import './App.css';
 import TopComponent from './TopComponent';
 import BottomComponent from './BottomComponent';
 import MainComponent from './MainComponent';
-
-function App() {
-  return(
-    <div className="App">
-      <TopComponent />
-      <hr className="hr1"></hr>
-      <MainComponent />
-      <BottomComponent />
-
-    </div>
-  );
+import { BrowserRouter as Router } from 'react-router-dom';
+class  App extends Component  {
+  render(){
+    return (
+      <div className="App">
+        <TopComponent />
+        <hr className="hr1" />
+        <Router>
+        <MainComponent />
+        </Router>
+        <BottomComponent />
+      </div>
+    );
+  }
 }
 
 export default App;

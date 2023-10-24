@@ -1,11 +1,11 @@
 import React from 'react';
 
-function BottomComponent() {
+function BotCtomComponent() {
     return (
-        <div>
-            <h1>하단 컴포넌트</h1>
-        </div>
+    <div>
+        <h1>Top</h1>
+    </div>
     );
 }
 
-export default BottomComponent;
+export default BotCtomComponent;

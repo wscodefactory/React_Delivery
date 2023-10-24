@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Order2() {
+function Detail() {
     return (
     <div>
         <h1>두번째 주문 컴포넌트</h1>
@@ -9,4 +9,4 @@ function Order2() {
     );
 }
 
-export default Order2;
+export default Detail;
