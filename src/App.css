@@ -1,58 +1,14 @@
 .App {
   text-align: center;
+  width:'100%';
+  height: '100%'
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #909090;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  font-size: calc(10px + 2vmin);
-  color: rgb(255, 255, 255);
-}
-
-.App-link {
-  color: #61dafb;
-}
-.Catalog {
-  background-color: rgb(255, 255, 255);
-  width: 390px;
-  height: 100;
-  font-size: calc(10px + 2vmin);
-  color: rgb(0, 0, 0);
-}
-
-.Catalog_img{
-  float:left;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .button1{
-  vertical-align : top;
-  background-color: #909090;
-  font-size: calc(10px + 2vmin);
-  border:none;  
+
+  background-color: #ffffff;
+
   width: 150px;
   height: 40px;
 }
@@ -62,10 +18,33 @@
   height: 70px;
 }
 
-.history{
-  float:left;
+
+.text {
+  font-size: 16px; /* 원하는 초기 글자 크기 설정 */
 }
 
+/* Catalog.css */
+
+.Catalog {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd; /* 컨테이너의 경계 스타일 */
+  padding: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.Main1{
+  background-color: #909090;
+}
 .Top{
-  background-color: #fff;
+  background-color: #00fffb;
+}
+
+.Bottom{
+  background-color: #00fffb;
+}
+
+.text-font{
+  text-align: center;
 }

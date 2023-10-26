@@ -38,12 +38,21 @@ class  App extends Component  {
   render(){
     return (
       <div className="App">
-        <TopComponent />
-        <hr className="hr1" />
-        <Router>
-        <MainComponent />
-        </Router>
-        <BottomComponent />
+
+        <div>
+          <TopComponent />
+        </div>
+        
+        <div className='Main1'>
+          <Router >
+            <MainComponent />
+          </Router>
+        </div>
+
+        <div>
+          <BottomComponent />
+        </div>
+
       </div>
     );
   }
