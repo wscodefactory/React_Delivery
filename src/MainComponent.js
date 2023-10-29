@@ -1,5 +1,8 @@
 import React from 'react';
 import Catalog from './Catalog';
+import { useNavigate } from 'react-router-dom';
+import Order from './Order';
+import { Text } from 'react-native';
 
 
 function MainComponent() {

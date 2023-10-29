@@ -33,7 +33,6 @@ import BottomComponent from './BottomComponent';
 import MainComponent from './MainComponent';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Order from './Order';
-// import { BrowserRouter as Router} from 'react-router-dom';
 
 
 class App extends Component {
@@ -41,15 +40,26 @@ class App extends Component {
 
   render() {
     return (
-      // <div className="App">
-      //   <TopComponent />
-      //   <hr className="hr1" />
-      //   <Router>
-      //   <MainComponent />
-      //   </Router>
-      //   <BottomComponent />
-      // </div>
-      <Order />
+      <div id="App" className="App">
+        <div>
+          <TopComponent />
+        </div>
+
+        <div className='Main1'>
+          <div>
+      
+              <button>주문하기</button>
+  
+          </div>
+          <Router>
+            <MainComponent />
+          </Router>
+        </div>
+
+        <div>
+          <BottomComponent />
+        </div>
+      </div>
     );
   }
 }
