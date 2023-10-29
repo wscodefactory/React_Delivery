@@ -48,3 +48,50 @@
 .text-font{
   text-align: center;
 }
+
+
+
+.order2{
+  float: left;
+}
+
+.div1 {
+  text-align: center;
+  width : 390px;
+  height: 100px;
+  background-color: #ffff;
+}
+
+.div2{
+  background-color: #ffff;
+    border: solid 10px;
+}
+
+.h1{
+  color: black;
+}
+
+/* App.css */
+
+.order1 {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.order-box {
+  border: 4px solid #000000;
+  margin: auto;
+  padding: auto;
+  width: 390px;
+  height: 200px;
+  text-align: center;
+}
+
+.order-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add other styles as needed */

@@ -31,20 +31,26 @@ import './App.css';
 import TopComponent from './TopComponent';
 import BottomComponent from './BottomComponent';
 import MainComponent from './MainComponent';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 
-class  App extends Component  {
-  render(){
+class App extends Component {
+
+
+  render() {
     return (
-      <div className="App">
-
+      <div id="App" className="App">
         <div>
           <TopComponent />
         </div>
-        
+
         <div className='Main1'>
-          <Router >
+          <div>
+      
+              <button>주문하기</button>
+  
+          </div>
+          <Router>
             <MainComponent />
           </Router>
         </div>
@@ -52,10 +58,11 @@ class  App extends Component  {
         <div>
           <BottomComponent />
         </div>
-
       </div>
     );
   }
 }
+
+
 
 export default App;
