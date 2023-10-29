@@ -118,3 +118,11 @@
 .tr1{
   text-align: center;
 }
+
+.delete{
+  background-color: #ffffff;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}

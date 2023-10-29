@@ -1,4 +1,5 @@
 import React from "react";
+import trueDew from '../img/trueDew.png';
 
 class Order extends React.Component {
   render() {
@@ -13,10 +14,12 @@ class Order extends React.Component {
       background: 'white'
     };
 
+    const phoneNumber = this.props.phone_number.slice(-4);
+
     return (
       <div  style={divStyle}>
         <div>
-          <img src={this.props.image} alt="profile" style={imageStyle} />
+          <img src={trueDew} alt="profile" style={imageStyle} />
         </div>
         <div>
           <div>주문 번호 : {this.props.id}번</div>
@@ -25,10 +28,11 @@ class Order extends React.Component {
           <div>주류 번호 : {this.props.alcohol_number}번</div>
           <div>가격 : {this.props.price}원</div>
           <div>현재 위치 : {this.props.location}</div>
-          <div>고유번호 : {this.props.phone_number}</div>
-          <div>현재 상태 : {this.props.now}</div>
+          <div>고유번호 : {phoneNumber}</div>
         </div>
-
+        <div>
+          <button className="delete">삭제</button>
+        </div>
       </div>
     );
   }
@@ -36,39 +40,3 @@ class Order extends React.Component {
 
 export default Order;
 
-
-/*
-// 더미 데이터 생성
-const order = {
-  'id' : 1,
-  'alcohol_type' : "참이슬",
-  'alcohol_number' : 3,
-  'price' : 1000,
-  'location' : "텔동",
-  'phone_number' : 71108128,
-  'now' : "주문 대기",
-  'name' : "박주환",
-}
-*/
-/*
-import React, { Component } from 'react'
-
-class Order extends Component {
-  render() {
-    return(
-    <div>
-      <h2>ID : {this.props.id}</h2>
-      <p>주종 : {this.props.alcohol_type}</p>
-      <p>수량 : {this.props.alcohol_number}</p>
-      <p>가격 : {this.props.price}</p>
-      <p>현재 위치 : {this.props.location}</p>
-      <p>주문 번호 : {this.props.phone_number}</p>
-      <p>현재 상태 : {this.props.now}</p>
-      <p>{this.props.name}</p>
-    </div>
-    );
-  }
-}
-
-export default Order
-*/

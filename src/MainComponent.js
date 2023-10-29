@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import './App.css';
 import Order from "./components/Order";
@@ -5,6 +6,11 @@ import trueDew from './img/trueDew.png'; // 이미지 파일을 import
 import realDewIsBack from './img/realDewIsBack.png'; 
 import new1 from './img/new1.png'; 
 import likeFirst from './img/likeFirst.png'; 
+import { useNavigate } from 'react-router-dom';
+import { Text } from 'react-native';
+
+
+function mainComponent() {
 
 const order = [
     
@@ -16,7 +22,6 @@ const order = [
         'price': '1000',
         'location': '대한민국',
         'phone_number': '39488047',
-        'now': '배달중',
         'name': '박주환',
     },
     {
@@ -27,7 +32,6 @@ const order = [
         'price': '1000',
         'location': '대한민국',
         'phone_number': '39488047',
-        'now': '배달중',
         'name': '오민섭',
     },
     {
@@ -38,7 +42,6 @@ const order = [
         'price': '1000',
         'location': '대한민국',
         'phone_number': '39488047',
-        'now': '배달중',
         'name': '유웅선',
     },
     {
@@ -49,12 +52,11 @@ const order = [
         'price': '1000',
         'location': '대한민국',
         'phone_number': '39488047',
-        'now': '배달중',
         'name': '박상혁',
     },
 ];
 
-    class mainComponent extends Component {
+class mainComponent extends Component {
     render() {
         
         return (
@@ -72,7 +74,6 @@ const order = [
                                 price={order.price}
                                 location={order.location}
                                 phone_number={order.phone_number}
-                                now={order.now}
                                 name={order.name}
                             />
                             <div className='Main1'><br/></div>
@@ -85,5 +86,5 @@ const order = [
         );
     }
 }
-
+}
 export default mainComponent;
