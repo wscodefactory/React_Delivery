@@ -31,13 +31,20 @@ import './App.css';
 import TopComponent from './TopComponent';
 import BottomComponent from './BottomComponent';
 import MainComponent from './MainComponent';
+<<<<<<< HEAD
 import { BrowserRouter as Router } from 'react-router-dom';
 import Order from './Order';
+=======
+import { BrowserRouter as Router} from 'react-router-dom';
+>>>>>>> bf865284e8b9aabea04f28250d0755aeebbab6bb
 
 
-class  App extends Component  {
-  render(){
+class App extends Component {
+
+
+  render() {
     return (
+<<<<<<< HEAD
       // <div className="App">
       //   <TopComponent />
       //   <hr className="hr1" />
@@ -47,8 +54,32 @@ class  App extends Component  {
       //   <BottomComponent />
       // </div>
       <Order />
+=======
+      <div id="App" className="App">
+        <div>
+          <TopComponent />
+        </div>
+
+        <div className='Main1'>
+          <div>
+      
+              <button>주문하기</button>
+  
+          </div>
+          <Router>
+            <MainComponent />
+          </Router>
+        </div>
+
+        <div>
+          <BottomComponent />
+        </div>
+      </div>
+>>>>>>> bf865284e8b9aabea04f28250d0755aeebbab6bb
     );
   }
 }
+
+
 
 export default App;

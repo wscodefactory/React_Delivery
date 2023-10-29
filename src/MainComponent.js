@@ -1,5 +1,6 @@
 import React from 'react';
 import Catalog from './Catalog';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 import Order from './Order';
 import { Text } from 'react-native';
@@ -15,17 +16,15 @@ const order = {
     'now' : "주문 대기",
     'name' : "박주환",
 }
+=======
+>>>>>>> bf865284e8b9aabea04f28250d0755aeebbab6bb
 
 
 function MainComponent() {
-    const navigate = useNavigate();
 
-    const clickButton = () => {
-        // 페이지 이동
-        navigate('./Detial'); // Detial 페이지로 이동
-    };
-
+    
     return (
+<<<<<<< HEAD
         <div>
             <div>
                 <h1>
@@ -35,7 +34,14 @@ function MainComponent() {
             </div>
         <div>
             <h1>second</h1>
+=======
+        <div > {/* 주요 컨테이너 */}
+
+            <div> {/* Catalog 컨테이너 */}
+                <Catalog />
+>>>>>>> bf865284e8b9aabea04f28250d0755aeebbab6bb
             </div>
+        
         </div>
     );
 }
