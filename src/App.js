@@ -33,6 +33,7 @@ import BottomComponent from './BottomComponent';
 import MainComponent from './MainComponent';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Order from './Order';
+import Catalog from './Catalog';
 
 
 class App extends Component {
@@ -52,7 +53,7 @@ class App extends Component {
   
           </div>
           <Router>
-            <MainComponent />
+            <Catalog />
           </Router>
         </div>
 
