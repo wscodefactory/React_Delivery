@@ -1,11 +1,11 @@
 import React from 'react';
 
-function TopComponent() {
+function topComponent() {
     return (
     <div className='Top'>
-        주문창
+        술팖
     </div>
     );
 }
 
-export default TopComponent;
+export default topComponent;

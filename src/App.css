@@ -39,6 +39,14 @@
 }
 .Top{
   background-color: #00fffb;
+  line-height: 100px;
+  text-align: center;
+  border: 1px solid black;
+  height: 100px;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: Nanum Gothic;
 }
 
 .Bottom{
@@ -67,8 +75,20 @@
     border: solid 10px;
 }
 
+.div3{
+  background-color: #00fffb;
+  color: black;
+  text-align: center;
+}
+
+.div4{
+  color: black;
+  text-align: center;
+  font-size: 18px;
+}
 .h1{
   color: black;
+  text-align: center;
 }
 
 /* App.css */
@@ -95,3 +115,7 @@
 }
 
 /* Add other styles as needed */
+
+.tr1{
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function BotCtomComponent() {
+function bottomComponent() {
     return (
     <div className='Bottom'>
         나는 바닥이다.
@@ -8,4 +8,4 @@ function BotCtomComponent() {
     );
 }
 
-export default BotCtomComponent;
+export default bottomComponent;
