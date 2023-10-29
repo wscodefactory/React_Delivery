@@ -4,40 +4,57 @@ class inputAdress extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            quantity: 1,
+            selectedWine: '---선택---',
         };
     }
-    
-    handleQuantityChange = (event) => {
-        this.setState({ quantity: event.target.value });
+
+    handleWineChange = (event) => {
+        this.setState({ selectedWine: event.target.value });
     };
-    
+
+    centerAlignOptionText = () => {
+        const selectElement = document.getElementsByName('tel4')[0];
+        const options = selectElement.getElementsByTagName('option');
+        
+        for (let option of options) {
+            option.style.textAlign = 'center';
+        }
+    };
+
+    componentDidMount() {
+        this.centerAlignOptionText();
+    }
+
     render() {
-        const inputStyle = {
-            textAlign: 'center', 
+        const containerStyle = {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
         };
 
         return (
-            <div>
-                <div>
-                <label htmlFor="quantity">주소 :  </label>
-
-                <input
-                    
-                    style={inputStyle} // 스타일을 적용
-                />
-                </div>
-                <br></br>
-                <div>
-                <label htmlFor="quantity">상세주소 :  </label>
-
-                <input
-                    
-                    style={inputStyle} // 스타일을 적용
-                />
+            <div style={containerStyle}>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td align="center">주종 : </td>
+                            <td></td>
+                            <td>
+                                <select
+                                    size="1"
+                                    name="tel4"
+                                    value={this.state.selectedWine}
+                                    onChange={this.handleWineChange}
+                                >
+                                    <option>---------- 선택 ----------</option>
+                                    <option>텔레토비 동산</option>
+                                    <option>가온마당</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            </div>
-            
         );
     }
 }

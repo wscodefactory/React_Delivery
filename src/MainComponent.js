@@ -52,35 +52,36 @@ const order = [
         'now': '배달중',
         'name': '박상혁',
     },
-    ];
+];
 
     class mainComponent extends Component {
     render() {
+        
         return (
-        <div >
-
             <div >
 
-            {order.map((order) => (
-            <div key={order.id} >
-            <Order
-                id={order.id}
-                image={order.image}
-                alcohol_type={order.alcohol_type}
-                alcohol_number={order.alcohol_number}
-                price={order.price}
-                location={order.location}
-                phone_number={order.phone_number}
-                now={order.now}
-                name={order.name}
-            />
-            <div className='Main1'><br/></div>
+                <div >
+
+                    {order.map((order) => (
+                        <div key={order.id} >
+                            <Order
+                                id={order.id}
+                                image={order.image}
+                                alcohol_type={order.alcohol_type}
+                                alcohol_number={order.alcohol_number}
+                                price={order.price}
+                                location={order.location}
+                                phone_number={order.phone_number}
+                                now={order.now}
+                                name={order.name}
+                            />
+                            <div className='Main1'><br/></div>
+                        </div>
+                    ))}
+
                 </div>
-            ))}
 
             </div>
-
-        </div>
         );
     }
 }
