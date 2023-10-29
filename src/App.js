@@ -33,10 +33,13 @@ import BottomComponent from './BottomComponent';
 import MainComponent from './MainComponent';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Order from './Order';
+// import { BrowserRouter as Router} from 'react-router-dom';
 
 
-class  App extends Component  {
-  render(){
+class App extends Component {
+
+
+  render() {
     return (
       // <div className="App">
       //   <TopComponent />
@@ -50,5 +53,7 @@ class  App extends Component  {
     );
   }
 }
+
+
 
 export default App;
