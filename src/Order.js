@@ -1,32 +1,54 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
+import Typography from '@mui/material/Typography'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
+const databaseURL = "https://givemesoju-d9d80-default-rtdb.asia-southeast1.firebasedatabase.app"
 
-// 더미 데이터 생성
-const order = {
-  'id' : 1,
-  'alcohol_type' : "참이슬",
-  'alcohol_number' : 3,
-  'price' : 1000,
-  'location' : "텔동",
-  'phone_number' : 71108128,
-  'now' : "주문 대기",
-  'name' : "박주환",
+class Order extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      order: {}
+    }
+  }
+  _get(){
+    fetch(`${databaseURL}/order.json`).then(res => {
+      if(res.status != 200){
+        throw new Error(res.statusText);
+      }
+      return res.json();
+    }).then(order => this.setState({order: order}));
+  }
+  shouldComponentUpdate(nextProps, nextState){
+    return nextState.order != this.state.order;
+  }
+  componentDidMount(){
+    this._get();
+  }
+  render() {
+    return (
+      <div>
+        {Object.keys(this.state.order).map(id => {
+          const order = this.state.order[id];
+          return (
+              <Card>
+                <CardContent>
+                  <Typography>
+                    주종 : {order.alcohol_type} <br/>
+                    수량 : {order.alcohol_number} <br/>
+                    위치 : {order.location} <br/>
+                    이름 : {order.name} <br/>
+                    번호 : {order.phone_number} <br/>
+                  </Typography>
+                </CardContent>
+              </Card>
+          );
+        })}
+      </div>    
+    )
+  }
 }
 
-function Order = () => {
-  return (
-    <div>
-      <h2>{this.props.id}</h2>
-      <p>{this.props.alcohol_type}</p>
-      <p>{this.props.alcohol_number}</p>
-      <p>{this.props.price}</p>
-      <p>{this.props.location}</p>
-      <p>{this.props.phone_number}</p>
-      <p>{this.props.now}</p>
-      <p>{this.props.name}</p>
-    </div>
-  )
-}
-
-export default order
+export default Order;

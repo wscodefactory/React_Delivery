@@ -32,19 +32,21 @@ import TopComponent from './TopComponent';
 import BottomComponent from './BottomComponent';
 import MainComponent from './MainComponent';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Order from './Order';
 
 
 class  App extends Component  {
   render(){
     return (
-      <div className="App">
-        <TopComponent />
-        <hr className="hr1" />
-        <Router>
-        <MainComponent />
-        </Router>
-        <BottomComponent />
-      </div>
+      // <div className="App">
+      //   <TopComponent />
+      //   <hr className="hr1" />
+      //   <Router>
+      //   <MainComponent />
+      //   </Router>
+      //   <BottomComponent />
+      // </div>
+      <Order />
     );
   }
 }
