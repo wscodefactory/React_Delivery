@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import TopComponent from './topComponent';
-import BottomComponent from './bottomComponent';
 import MainComponent from './mainComponent';
 import PopupMain from './pop_up/popUpMain';
 import Modal from 'react-modal'; // react-modal 임포트 추가
@@ -35,16 +34,13 @@ class App extends Component {
 
         <div className="Main1">
           <div>
-            <button onClick={this.openModal}>주문하기</button>
+            <button className="button1" onClick={this.openModal}>주문하기</button>
           </div>
           <Router>
             <MainComponent />
           </Router>
         </div>
 
-        <div>
-          <BottomComponent />
-        </div>
 
           <Modal
             isOpen={this.state.isModalOpen}

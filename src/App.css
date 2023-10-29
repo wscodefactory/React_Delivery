@@ -8,9 +8,10 @@
 .button1{
 
   background-color: #ffffff;
-
   width: 150px;
   height: 40px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .realDew{
@@ -49,9 +50,7 @@
   font-family: Nanum Gothic;
 }
 
-.Bottom{
-  background-color: #00fffb;
-}
+
 
 .text-font{
   text-align: center;
