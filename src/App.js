@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import TopComponent from './topComponent';
-import MainComponent from './mainComponent';
+import TopComponent from './TopComponent';
+import MainComponent from './MainComponent';
 import PopupMain from './pop_up/popUpMain';
 import Modal from 'react-modal'; // react-modal 임포트 추가
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -36,12 +36,12 @@ class App extends Component {
           <div>
             <button className="button1" onClick={this.openModal}>주문하기</button>
           </div>
-          <Router>
-            <MainComponent />
-          </Router>
+          <div>
+            <Router>
+              <MainComponent />
+            </Router>
+          </div>
         </div>
-
-
           <Modal
             isOpen={this.state.isModalOpen}
             onRequestClose={this.closeModal}

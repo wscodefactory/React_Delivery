@@ -1,4 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+
+// function TypeOfAlcohol = ({onDataChange}) => {
+//     const sendDataToParent =() => {
+//         onDataChange()
+//     }
+// }
 
 class TypeOfAlcohol extends Component {
     constructor(props) {

@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Typeofalcohol from './typeOfAlcohol'
 import Quantityofalcohol from './quantityOfAlcohol'
 import Inputphonenumber from './inputPhoneNumber'
 import Inputadress from './inputAdress'
 
-class popUpMain extends React.Component{
-    render(){
-        return(
-            <div className='div3'>
+
+const PopUpMain = () => {
+
+    const [Alcohol_type, setalcohol_type] = useState('');
+    const [Alcohol_number, setalcohol_number] = useState('');
+    const [Location, setlocation] = useState('');
+    const [Name, setname] = useState('');
+    const [Phone_number, setphone_number] = useState('');
+    const [Price, setprice] = useState('');
+
+    const handlealcohol_type = (data) => {
+        setalcohol_type(data);
+    }
+
+    return (
+        <div className='div3'>
                 <h1>- 주문하기 -</h1>
             <div>
             <br></br>
             <br></br>
-            <Typeofalcohol/>
+            <Typeofalcohol onDataChange={handlealcohol_type} />
             <br></br>
             <Quantityofalcohol/>
             <br></br>
@@ -22,10 +34,8 @@ class popUpMain extends React.Component{
             <br></br>
             </div>
 
-            </div>
-            
-        );
-    }
+        </div>
+    )
 }
 
-export default popUpMain;
+export default PopUpMain;
