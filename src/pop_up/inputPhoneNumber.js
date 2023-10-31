@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class inputPhoneNumber extends Component {
+class InputPhoneNumber extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,4 +31,4 @@ class inputPhoneNumber extends Component {
     }
 }
 
-export default inputPhoneNumber;
+export default InputPhoneNumber;

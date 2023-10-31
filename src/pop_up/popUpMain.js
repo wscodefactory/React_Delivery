@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Typeofalcohol from './typeOfAlcohol'
+import Typeofalcohol from './QypeOfAlcohol'
 import Quantityofalcohol from './quantityOfAlcohol'
-import Inputphonenumber from './inputPhoneNumber'
-import Inputadress from './inputAdress'
+import Inputphonenumber from './InputPhoneNumber'
+import Inputadress from './InputAdress'
 
 
 const PopUpMain = () => {

@@ -58,16 +58,16 @@ class MainComponent extends Component {
     constructor(){
         super();
         this.state = {
-          order: {},
-          dialog: false,
-          alcohol_number: '',
-          alcohol_type: '',
-          location: '',
-          phone_number: '',
-          name: '',
-          price: '',
+            order: {},
+            dialog: false,
+            alcohol_number: '',
+            alcohol_type: '',
+            location: '',
+            phone_number: '',
+            name: '',
+            price: '',
         }
-      }
+    }
 
     _get(){
         fetch(`${databaseURL}/order.json`).then(res => {

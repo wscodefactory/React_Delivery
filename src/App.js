@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TopComponent from './TopComponent';
 import MainComponent from './MainComponent';
-import PopupMain from './pop_up/popUpMain';
+import PopupMain from './pop_up/PopUpMain';
 import Modal from 'react-modal'; // react-modal 임포트 추가
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -36,12 +36,12 @@ class App extends Component {
           <div>
             <button className="button1" onClick={this.openModal}>주문하기</button>
           </div>
-          <div>
-            <Router>
-              <MainComponent />
-            </Router>
-          </div>
+          <Router>
+            <MainComponent />
+          </Router>
         </div>
+
+
           <Modal
             isOpen={this.state.isModalOpen}
             onRequestClose={this.closeModal}
@@ -69,77 +69,3 @@ class App extends Component {
 export default App;
 
 
-
-
-/*
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
-*/
-
-/*
-import React, { Component } from 'react';
-import './App.css';
-import TopComponent from './TopComponent';
-import BottomComponent from './BottomComponent';
-import MainComponent from './MainComponent';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Order from './Order';
-import Catalog from './Catalog';
-
-
-class App extends Component {
-
-
-  render() {
-    return (
-      <div id="App" className="App">
-        <div>
-          <TopComponent />
-        </div>
-
-        <div className='Main1'>
-          <div>
-      
-              <button>주문하기</button>
-  
-          </div>
-          <Router>
-            <Catalog />
-          </Router>
-        </div>
-
-        <div>
-          <BottomComponent />
-        </div>
-      </div>
-    );
-  }
-}
-
-
-
-export default App;
-*/
