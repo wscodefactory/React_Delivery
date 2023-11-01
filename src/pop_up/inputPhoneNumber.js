@@ -1,34 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class InputPhoneNumber extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            quantity: 1,
-        };
-    }
-    
-    handleQuantityChange = (event) => {
-        this.setState({ quantity: event.target.value });
+function InputPhoneNumber() {
+    const [quantity, setQuantity] = useState(''); // 전화번호 뒷자리를 문자열로 저장
+
+    const inputStyle = {
+        textAlign: 'center',
     };
-    
-    render() {
-        const inputStyle = {
-            textAlign: 'center', 
-        };
 
-        return (
-            <div>
-                <label htmlFor="quantity">전화번호 : 010 - </label>
+    const handleQuantityChange = (event) => {
+        const value = event.target.value;
+        // 입력값에서 숫자만 추출하고 뒤에서 4자리만 유지
+        const cleanedValue = value.replace(/\D/g, '').slice(-4);  //4자리 출력시 cleanedValue 사용
+        setQuantity(value);
+    };
 
-                <input
-                    
-                    style={inputStyle} // 스타일을 적용
-                />
-                &nbsp; ( - 는 생략해주세요 )
-            </div>
-        );
-    }
+    return (
+        <div>
+             &nbsp; &nbsp; &nbsp;
+            <label htmlFor="quantity">전화번호 : 010 - </label>
+
+            <input
+                type="text"
+                style={inputStyle}
+                value={quantity}
+                onChange={handleQuantityChange}
+            />
+            &nbsp; ( - 는 생략해주세요 )
+        </div>
+    );
 }
 
 export default InputPhoneNumber;

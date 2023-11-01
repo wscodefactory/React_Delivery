@@ -1,6 +1,7 @@
 import React from "react";
 import trueDew from '../img/trueDew.png';
 import { Grid } from "@mui/material";
+import Button from "@mui/material/Button";
 
 class Order extends React.Component {
   render() {
@@ -15,9 +16,8 @@ class Order extends React.Component {
       background: 'white',
     };
 
-    const deleteStyle = {
 
-    };
+
 
     //const phoneNumber = this.props.phone_number.slice(-4);
 
@@ -28,7 +28,7 @@ class Order extends React.Component {
             <div>
               <img src={trueDew} alt="profile" style={imageStyle} />
             </div>
-            <div>
+            <div >
               <div>주문 번호 : {this.props.id}번</div>
               <div>이름 : {this.props.name}</div>
               <div>주종 : {this.props.alcohol_type}</div>
@@ -38,10 +38,10 @@ class Order extends React.Component {
             </div>
           </div>
         </Grid>
-        <Grid item xs={6} style={divStyle}>
-          <div style={divStyle}>
-            <button className="delete">삭제</button>
-          </div>
+        <Grid item xs={6} style={divStyle} className="delete-button-container">
+            <div className="div6" >
+              <Button className="delete" variant="contained" color="error">삭제</Button>
+            </div>
         </Grid>
       </Grid>
     );

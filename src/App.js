@@ -5,6 +5,7 @@ import MainComponent from './MainComponent';
 import PopupMain from './pop_up/PopUpMain';
 import Modal from 'react-modal'; // react-modal 임포트 추가
 import { BrowserRouter as Router } from 'react-router-dom';
+import Button from "@mui/material/Button";
 
 // Modal.setAppElement('#root'); // 필수 설정 제거 (create-react-app에서는 필요 없음)
 
@@ -34,7 +35,7 @@ class App extends Component {
 
         <div className="Main1">
           <div>
-            <button className="button1" onClick={this.openModal}>주문하기</button>
+            <Button className="button1" onClick={this.openModal} variant='contained' color='primary'>주문하기</Button>
           </div>
           <Router>
             <MainComponent />
@@ -57,9 +58,9 @@ class App extends Component {
             <PopupMain />
             <br></br>
             &nbsp;
-            <button>주문하기</button>
+            <Button variant='contained' color='primary'>주문하기</Button>
             &nbsp; &nbsp; &nbsp; 
-            <button onClick={this.closeModal}>뒤로가기</button>
+            <Button onClick={this.closeModal} variant='contained' color='primary'>뒤로가기</Button>
           </Modal>
       </div>
     );

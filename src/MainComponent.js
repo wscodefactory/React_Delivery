@@ -148,7 +148,7 @@ class MainComponent extends Component {
                 {Object.keys(this.state.order).map(id => {
                     const order = this.state.order[id];
                     return (
-                        <div key={order.id} >
+                        <div key={order.id} className='div5'>
                             <Order
                                 id={id}
                                 alcohol_type={order.alcohol_type}

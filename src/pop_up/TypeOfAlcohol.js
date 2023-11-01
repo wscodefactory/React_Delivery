@@ -1,11 +1,12 @@
+// function TypeOfAlcohol = ({onDataChange}) => {
+//     const sendDataToParent =() => {
+//         onDataChange()
+//     }
+// }
 import React, { useState, useEffect } from 'react';
 
-function QuantityOfAlcohol() {
+function TypeOfAlcohol({ onDataChange }) {
     const [selectedWine, setSelectedWine] = useState('---선택---');
-
-    const handleWineChange = (event) => {
-        setSelectedWine(event.target.value);
-    };
 
     useEffect(() => {
         const centerAlignOptionText = () => {
@@ -18,10 +19,17 @@ function QuantityOfAlcohol() {
         };
 
         centerAlignOptionText();
-    }, []); 
+    }, []);
+    
+    const handleWineChange = (event) => {
+        const selectedValue = event.target.value;
+        setSelectedWine(selectedValue);
+        onDataChange(selectedValue);
+    };
 
     const containerStyle = {
         display: 'flex',
+        alignItems: 'center',
     };
 
     return (
@@ -29,10 +37,8 @@ function QuantityOfAlcohol() {
             <table>
                 <tbody>
                     <tr>
-                        
-                    &nbsp; &nbsp; &nbsp;
-                
-                        <td>수량 : </td>
+                        &nbsp; &nbsp; &nbsp;
+                        <td align="center">주종 : </td>
                         <td></td>
                         <td>
                             <select
@@ -41,16 +47,15 @@ function QuantityOfAlcohol() {
                                 value={selectedWine}
                                 onChange={handleWineChange}
                             >
-                                <option>---------- 선택 ----------</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
+                                <option>---선택---</option>
+                                <option>참이슬</option>
+                                <option>참이슬 오리지널</option>
+                                <option>진로이즈백</option>
+                                <option>새로</option>
+                                <option>별빛청하</option>
+                                <option>처음처럼</option>
                             </select>
                         </td>
-                        &nbsp;병
                     </tr>
                 </tbody>
             </table>
@@ -58,4 +63,4 @@ function QuantityOfAlcohol() {
     );
 }
 
-export default QuantityOfAlcohol;
+export default TypeOfAlcohol;
