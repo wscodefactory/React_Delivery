@@ -9,9 +9,9 @@
   font-size: 18px;
   font-weight: bold;
   display: flex;
-  padding: 20px 20px;
+  padding: 10px 10px;
   cursor: pointer;
-  
+  justify-content: flex-end;
 }
 
 .realDew{
@@ -36,7 +36,7 @@
 }
 
 .Main1{
-  background-color: #909090;
+  background-color: #000000;
 }
 .Top{
   background-color: #FFEAD4;
@@ -102,10 +102,19 @@
   
 }
 
+.div8{
+  border : solid 5px;
+}
 .h1{
   color: black;
   text-align: center;
-  border:none;
+  
+}
+
+.h2{
+  color: #FFEAD4;
+  text-align: center;
+  
 }
 
 /* App.css */

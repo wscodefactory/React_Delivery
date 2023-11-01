@@ -17,27 +17,25 @@ class Order extends React.Component {
       background: 'white',
     };
 
-
-
-
-    //const phoneNumber = this.props.phone_number.slice(-4);
+    // 가격을 계산합니다.
+    const totalPrice = this.props.price * this.props.alcohol_number;
 
     return (
-          <div style={divStyle}>
-            <div>
-              <img src={trueDew} alt="profile" style={imageStyle} />
-            </div>
-            <div>
-              <div>이름 : {this.props.name}</div>
-              <div>주종 : {this.props.alcohol_type}</div>
-              <div>개수 : {this.props.alcohol_number}개</div>
-              <div>가격 : 개당 {this.props.price}원</div>
-              <div>현재 위치 : {this.props.location}</div>
-            </div>
-          </div>
+      <div style={divStyle}>
+        <div>
+          <img src={trueDew} alt="profile" style={imageStyle} />
+        </div>
+        <div>
+          <div>전화번호 뒷자리: {this.props.phone_number}</div>
+          <div>이름 : {this.props.name}</div>
+          <div>주종 : {this.props.alcohol_type}</div>
+          <div>개수 : {this.props.alcohol_number}개</div>
+          <div>가격 : {totalPrice}원</div> {/* 합계 표시 */}
+          <div>현재 위치 : {this.props.location}</div>
+        </div>
+      </div>
     );
   }
 }
 
 export default Order;
-

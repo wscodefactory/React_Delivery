@@ -10,6 +10,7 @@ import Quantityofalcohol from './pop_up/QuantityOfAlcohol'
 import Inputphonenumber from './pop_up/InputPhoneNumber'
 import Inputadress from './pop_up/InputAdress'
 import Inputname from './pop_up/InputName'
+import InputPhoneNumber from './pop_up/InputPhoneNumber';
 
 // Modal.setAppElement('#root'); // 필수 설정 제거 (create-react-app에서는 필요 없음)
 
@@ -106,7 +107,7 @@ class App extends Component {
         </div>
         <div className="Main1">
           <div>
-            <Button className="button1" onClick={this.openModal} variant='contained' color='primary'>주문하기</Button>
+            <button className="button1" onClick={this.openModal} >주문하기</button>
           </div>
           <Router>
             <MainComponent />
@@ -125,10 +126,11 @@ class App extends Component {
             }}
           >
             <div className='h2' >
-              <h1>- 주문하기 -</h1>
+              <h1 className='div8'>- 주문하기 -</h1>
               <div className='div7'>
                 <br></br>
                 <br></br>
+
                 <Inputname onDataChange={this.handleInput_nameData}/>
                 <br></br>
                 <Typeofalcohol onDataChange={this.handleAlcohol_typeData} />
