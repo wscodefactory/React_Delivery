@@ -64,6 +64,18 @@ class MainComponent extends Component {
     
     handleDelete = (id) => {
         this._delete(id);
+        // return fetch(`${databaseURL}/order/${id}.json`, {
+        //     method: 'PATCH'
+        // }).then(res => {
+        //     if(res.status != 200) {
+        //         throw new Error(res.statusText);
+        //     }
+        //     return res.json();
+        // }).then(() => {
+        //     let nextState = this.state.order.delete; 
+        //     nextState = 1;      
+        //     this.setState({order: nextState});  
+        // });
     }
     
     render() {
@@ -78,7 +90,7 @@ class MainComponent extends Component {
             <div>
                 {Object.keys(this.state.order).map(id => {
                     const order = this.state.order[id];
-                    return (
+                    return ( order.delete == 0 ?
                         <div key={order.id} className='div5'>
                             <Grid container>
                                 <Grid item xs={9}>
@@ -103,7 +115,7 @@ class MainComponent extends Component {
                                 </Grid>
                             </Grid>
                             <div className='Main1'><br/></div>
-                        </div>
+                        </div> : ''
                     )
                 })}
             </div>

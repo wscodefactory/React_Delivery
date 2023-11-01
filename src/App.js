@@ -64,6 +64,7 @@ class App extends Component {
       name: this.state.name,
       phone_number: this.state.phone_number,
       price: this.state.price,
+      delete: 0,
     }
     this.closeModal();
     this._post(order);
