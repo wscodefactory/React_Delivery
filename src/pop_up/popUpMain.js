@@ -20,9 +20,7 @@ const PopUpMain = () => {
 
     return (
         <div   className='h2' >
-    
-                <h1 >- 주문하기 -</h1>
-    
+            <h1>- 주문하기 -</h1>
             <div  className='div7'>
                 <br></br>
                 <br></br>

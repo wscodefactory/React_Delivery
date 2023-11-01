@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 import Button from "@mui/material/Button";
 
 class Order extends React.Component {
+
   render() {
     const imageStyle = {
       width: '100px', // 이미지 너비 설정
@@ -22,14 +23,11 @@ class Order extends React.Component {
     //const phoneNumber = this.props.phone_number.slice(-4);
 
     return (
-      <Grid container>
-        <Grid item xs={6}>
           <div style={divStyle}>
             <div>
               <img src={trueDew} alt="profile" style={imageStyle} />
             </div>
-            <div >
-              <div>주문 번호 : {this.props.id}번</div>
+            <div>
               <div>이름 : {this.props.name}</div>
               <div>주종 : {this.props.alcohol_type}</div>
               <div>개수 : {this.props.alcohol_number}개</div>
@@ -37,13 +35,6 @@ class Order extends React.Component {
               <div>현재 위치 : {this.props.location}</div>
             </div>
           </div>
-        </Grid>
-        <Grid item xs={6} style={divStyle} className="delete-button-container">
-            <div className="div6" >
-              <Button className="delete" variant="contained" color="error">삭제</Button>
-            </div>
-        </Grid>
-      </Grid>
     );
   }
 }

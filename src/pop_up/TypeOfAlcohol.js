@@ -1,8 +1,3 @@
-// function TypeOfAlcohol = ({onDataChange}) => {
-//     const sendDataToParent =() => {
-//         onDataChange()
-//     }
-// }
 import React, { useState, useEffect } from 'react';
 
 function TypeOfAlcohol({ onDataChange }) {
