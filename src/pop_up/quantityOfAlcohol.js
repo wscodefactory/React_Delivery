@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-function QuantityOfAlcohol() {
+function QuantityOfAlcohol({ onDataChange }) {
     const [selectedWine, setSelectedWine] = useState('---선택---');
 
     const handleWineChange = (event) => {
-        setSelectedWine(event.target.value);
+        const selectedValue = event.target.value;
+        setSelectedWine(selectedValue);
+        onDataChange(selectedValue);
     };
 
     useEffect(() => {

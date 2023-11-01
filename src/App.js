@@ -15,9 +15,6 @@ import Inputname from './pop_up/InputName'
 
 const databaseURL = "https://givemesoju-d9d80-default-rtdb.asia-southeast1.firebasedatabase.app"
 
-
-
-
 class App extends Component {
   constructor() {
     super();
@@ -26,8 +23,8 @@ class App extends Component {
       isModalOpen: false,
       order: {},
       dialog: false,
+      phone_number: '',
       alcohol_number: '',
-      setalcohol_type: '',
       alcohol_type: '',
       location: '',
       name: '',
@@ -62,11 +59,11 @@ class App extends Component {
   handleSubmit = () => {
     const order = {
       alcohol_type: this.state.alcohol_type,
-      // alcohol_number: this.state.alcohol_number,
-      // location: this.state.location,
-      // name: this.state.name,
-      // phone_number: this.state.phone_number,
-      // price: this.state.price,
+      alcohol_number: this.state.alcohol_number,
+      location: this.state.location,
+      name: this.state.name,
+      phone_number: this.state.phone_number,
+      price: this.state.price,
     }
     this.closeModal();
     // if (!order.alcohol_number && !order.alcohol_type && !order.location && !order.name && !order.phone_number && !order.price) {
@@ -81,13 +78,32 @@ class App extends Component {
     this.state.alcohol_type = newData;
   }
 
+  handleAlcohol_numberData = (newData) => {
+    this.state.alcohol_number = newData;
+  }
+
+  handleInput_nameData = (newData) => {
+    this.state.name = newData;
+  }
+
+  handleInput_addressData = (newData) => {
+    this.state.location = newData;
+  }
+
+  handlePriceData = (newData) => {
+    this.state.price = newData;
+  }
+
+  handlePhone_numberData = (newData) => {
+    this.state.phone_number = newData;
+  }
+
   render() {
     return (
       <div id="App" className="App">
         <div>
           <TopComponent />
         </div>
-
         <div className="Main1">
           <div>
             <Button className="button1" onClick={this.openModal} variant='contained' color='primary'>주문하기</Button>
@@ -113,15 +129,15 @@ class App extends Component {
               <div className='div7'>
                 <br></br>
                 <br></br>
-                <Inputname/>
+                <Inputname onDataChange={this.handleInput_nameData}/>
                 <br></br>
                 <Typeofalcohol onDataChange={this.handleAlcohol_typeData} />
                 <br></br>
-                <Quantityofalcohol/>
+                <Quantityofalcohol onDataChange={this.handleAlcohol_numberData}/>
                 <br></br>
-                <Inputphonenumber/>
+                <Inputphonenumber onDataChange={this.handlePhone_numberData}/>
                 <br></br>
-                <Inputadress/>
+                <Inputadress onDataChange={this.handleInput_addressData}/>
                 <br></br>
               </div>
             </div>

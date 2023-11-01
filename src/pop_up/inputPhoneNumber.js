@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function InputPhoneNumber() {
+function InputPhoneNumber({ onDataChange }) {
     const [quantity, setQuantity] = useState(''); // 전화번호 뒷자리를 문자열로 저장
 
     const inputStyle = {
