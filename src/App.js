@@ -12,8 +12,6 @@ import Inputadress from './pop_up/InputAdress'
 import Inputname from './pop_up/InputName'
 import InputPhoneNumber from './pop_up/InputPhoneNumber';
 
-// Modal.setAppElement('#root'); // 필수 설정 제거 (create-react-app에서는 필요 없음)
-
 const databaseURL = "https://givemesoju-d9d80-default-rtdb.asia-southeast1.firebasedatabase.app"
 
 class App extends Component {
@@ -42,6 +40,7 @@ class App extends Component {
   };
 
   _post(order) {  // 추가하기
+    console.log(order);
     return fetch(`${databaseURL}/order.json`, {
       method: 'POST',
       body : JSON.stringify(order)
@@ -52,7 +51,7 @@ class App extends Component {
       return res.json();
     }).then(data => {
       let nextState = this.state.order;  
-      // nextState[data.name] = order;     
+      nextState[data.name] = order;     
       this.setState({order: nextState});  
     });
   }
@@ -67,11 +66,8 @@ class App extends Component {
       price: this.state.price,
     }
     this.closeModal();
-    // if (!order.alcohol_number && !order.alcohol_type && !order.location && !order.name && !order.phone_number && !order.price) {
-    //   return;
-    // }
     this._post(order);
-    window.location.reload()
+    setTimeout("window.location.reload()", 500);
   }
 
   // 각 컴포넌트에서 데이터 받아오기
@@ -130,14 +126,13 @@ class App extends Component {
               <div className='div7'>
                 <br></br>
                 <br></br>
-
                 <Inputname onDataChange={this.handleInput_nameData}/>
                 <br></br>
                 <Typeofalcohol onDataChange={this.handleAlcohol_typeData} />
                 <br></br>
                 <Quantityofalcohol onDataChange={this.handleAlcohol_numberData}/>
                 <br></br>
-                <Inputphonenumber onDataChange={this.handlePhone_numberData}/>
+                <InputPhoneNumber onDataChange={this.handlePhone_numberData}/>
                 <br></br>
                 <Inputadress onDataChange={this.handleInput_addressData}/>
                 <br></br>

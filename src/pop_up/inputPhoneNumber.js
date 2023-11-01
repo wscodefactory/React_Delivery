@@ -8,9 +8,9 @@ function InputPhoneNumber({ onDataChange }) {
     };
 
     const handleNumberChange = (event) => {
-        const value = event.target.value;
-
-        setPhoneNumber(value);
+        const quantity = event.target.value;
+        setPhoneNumber(quantity);
+        onDataChange(quantity)
     };
 
     return (
