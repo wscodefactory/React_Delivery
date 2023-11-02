@@ -12,6 +12,7 @@
   padding: 10px 10px;
   cursor: pointer;
   justify-content: flex-end;
+  margin: 0 auto;
 }
 
 .realDew{
@@ -106,6 +107,7 @@
   border : solid 2px;
   background-color: #FFEAD4;
 }
+
 .h1{
   color: black;
   text-align: center;

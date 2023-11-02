@@ -15,6 +15,7 @@ import InputMemo from './pop_up/InputMemo'
 
 const databaseURL = "https://givemesoju-d9d80-default-rtdb.asia-southeast1.firebasedatabase.app"
 
+
 class App extends Component {
   constructor() {
     super();
@@ -96,6 +97,7 @@ class App extends Component {
   handlePhone_numberData = (newData) => {
     this.state.phone_number = newData;
   }
+  
 
   render() {
     return (
@@ -105,7 +107,9 @@ class App extends Component {
         </div>
         <div className="Main1">
           <div>
+            <div className='div9'>
             <button className="button1" onClick={this.openModal} >주문하기</button>
+            </div>
           </div>
           <Router>
             <MainComponent />
