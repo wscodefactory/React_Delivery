@@ -44,11 +44,13 @@ function TypeOfAlcohol({ onDataChange }) {
                             >
                                 <option>---선택---</option>
                                 <option>참이슬</option>
-                                <option>참이슬 오리지널</option>
-                                <option>진로이즈백</option>
+                                <option>진로</option>
                                 <option>새로</option>
                                 <option>별빛청하</option>
                                 <option>처음처럼</option>
+                                <option>카스</option>
+                                <option>테라</option>
+                                <option>콜라</option>
                             </select>
                         </td>
                     </tr>

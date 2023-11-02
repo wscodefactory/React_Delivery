@@ -41,7 +41,7 @@ function InputAdress({ onDataChange }) {
                             >
                                 <option>---------- 선택 ----------</option>
                                 <option>텔레토비 동산</option>
-                                <option>가온마당</option>
+                                <option>도서관 옆 마당</option>
                             </select>
                         </td>
                     </tr>

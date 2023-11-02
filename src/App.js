@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Text } from 'react';
 import './App.css';
 import TopComponent from './TopComponent';
 import MainComponent from './MainComponent';
@@ -142,7 +142,7 @@ class App extends Component {
                 <br></br>
                 <Inputadress onDataChange={this.handleInput_addressData}/>
                 <br></br>
-                <InputMemo  />
+                {/* <InputMemo  /> */}
                 <br></br>
                 <br></br>
               </div>

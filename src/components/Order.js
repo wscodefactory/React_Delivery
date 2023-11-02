@@ -19,7 +19,7 @@ class Order extends React.Component {
 
     // 가격을 계산합니다.
 
-    const totalPrice = 500 * this.props.alcohol_number;
+    const totalPrice = 1000 * this.props.alcohol_number;
 
     return (
       <div style={divStyle}>
