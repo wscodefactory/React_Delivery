@@ -102,7 +102,7 @@ class MainComponent extends Component {
                                                 alcohol_number={order.alcohol_number}
                                                 price={order.price}
                                                 location={order.location}
-                                                phone_number={order.phone_number}
+                                                phone_number={order.phone_number.slice(-4)}
                                                 name={order.name}
                                             />
                                         </div>

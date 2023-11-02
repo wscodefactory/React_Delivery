@@ -11,6 +11,7 @@ import Inputphonenumber from './pop_up/InputPhoneNumber'
 import Inputadress from './pop_up/InputAdress'
 import Inputname from './pop_up/InputName'
 import InputPhoneNumber from './pop_up/InputPhoneNumber';
+import InputMemo from './pop_up/InputMemo'
 
 const databaseURL = "https://givemesoju-d9d80-default-rtdb.asia-southeast1.firebasedatabase.app"
 
@@ -136,6 +137,9 @@ class App extends Component {
                 <InputPhoneNumber onDataChange={this.handlePhone_numberData}/>
                 <br></br>
                 <Inputadress onDataChange={this.handleInput_addressData}/>
+                <br></br>
+                <InputMemo  />
+                <br></br>
                 <br></br>
               </div>
             </div>

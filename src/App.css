@@ -103,7 +103,8 @@
 }
 
 .div8{
-  border : solid 5px;
+  border : solid 2px;
+  background-color: #FFEAD4;
 }
 .h1{
   color: black;
@@ -114,6 +115,7 @@
 .h2{
   color: #000000;
   text-align: center;
+
 }
 
 /* App.css */
@@ -157,3 +159,4 @@
   justify-content: flex-end;
   margin-right: 100px;
 }
+
