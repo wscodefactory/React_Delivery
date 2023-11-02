@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function InputName() {
+function InputName({ onDataChange }) {
     const [name, setName] = useState('');
 
     const inputStyle = {
@@ -8,8 +8,9 @@ function InputName() {
     };
 
     const handleNameChange = (event) => {
-        const value = event.target.value;
-        setName(value);
+        const name = event.target.value;
+        setName(name);
+        onDataChange(name);
     };
 
     return (

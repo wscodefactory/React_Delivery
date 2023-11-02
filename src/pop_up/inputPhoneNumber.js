@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function InputPhoneNumber() {
+function InputPhoneNumber({ onDataChange }) {
     const [quantity, setPhoneNumber] = useState(''); // 전화번호 뒷자리를 문자열로 저장
 
     const inputStyle = {
@@ -8,9 +8,9 @@ function InputPhoneNumber() {
     };
 
     const handleNumberChange = (event) => {
-        const value = event.target.value;
-
-        setPhoneNumber(value);
+        const quantity = event.target.value;
+        setPhoneNumber(quantity);
+        onDataChange(quantity)
     };
 
     return (

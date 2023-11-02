@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-function InputAdress() {
+function InputAdress({ onDataChange }) {
     const [selectedWine, setSelectedWine] = useState('---선택---');
 
     const handleWineChange = (event) => {
+        const selectedWine = event.target.value;
         setSelectedWine(event.target.value);
+        onDataChange(selectedWine);
+        
     };
 
     useEffect(() => {

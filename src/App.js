@@ -12,12 +12,7 @@ import Inputadress from './pop_up/InputAdress'
 import Inputname from './pop_up/InputName'
 import InputPhoneNumber from './pop_up/InputPhoneNumber';
 
-// Modal.setAppElement('#root'); // 필수 설정 제거 (create-react-app에서는 필요 없음)
-
 const databaseURL = "https://givemesoju-d9d80-default-rtdb.asia-southeast1.firebasedatabase.app"
-
-
-
 
 class App extends Component {
   constructor() {
@@ -27,8 +22,8 @@ class App extends Component {
       isModalOpen: false,
       order: {},
       dialog: false,
+      phone_number: '',
       alcohol_number: '',
-      setalcohol_type: '',
       alcohol_type: '',
       location: '',
       name: '',
@@ -45,6 +40,7 @@ class App extends Component {
   };
 
   _post(order) {  // 추가하기
+    console.log(order);
     return fetch(`${databaseURL}/order.json`, {
       method: 'POST',
       body : JSON.stringify(order)
@@ -55,7 +51,7 @@ class App extends Component {
       return res.json();
     }).then(data => {
       let nextState = this.state.order;  
-      // nextState[data.name] = order;     
+      nextState[data.name] = order;     
       this.setState({order: nextState});  
     });
   }
@@ -63,23 +59,41 @@ class App extends Component {
   handleSubmit = () => {
     const order = {
       alcohol_type: this.state.alcohol_type,
-      // alcohol_number: this.state.alcohol_number,
-      // location: this.state.location,
-      // name: this.state.name,
-      // phone_number: this.state.phone_number,
-      // price: this.state.price,
+      alcohol_number: this.state.alcohol_number,
+      location: this.state.location,
+      name: this.state.name,
+      phone_number: this.state.phone_number,
+      price: this.state.price,
+      delete: 0,
     }
     this.closeModal();
-    // if (!order.alcohol_number && !order.alcohol_type && !order.location && !order.name && !order.phone_number && !order.price) {
-    //   return;
-    // }
     this._post(order);
-    window.location.reload()
+    setTimeout("window.location.reload()", 500);
   }
 
   // 각 컴포넌트에서 데이터 받아오기
   handleAlcohol_typeData = (newData) => {
     this.state.alcohol_type = newData;
+  }
+
+  handleAlcohol_numberData = (newData) => {
+    this.state.alcohol_number = newData;
+  }
+
+  handleInput_nameData = (newData) => {
+    this.state.name = newData;
+  }
+
+  handleInput_addressData = (newData) => {
+    this.state.location = newData;
+  }
+
+  handlePriceData = (newData) => {
+    this.state.price = newData;
+  }
+
+  handlePhone_numberData = (newData) => {
+    this.state.phone_number = newData;
   }
 
   render() {
@@ -88,7 +102,6 @@ class App extends Component {
         <div>
           <TopComponent />
         </div>
-
         <div className="Main1">
           <div>
             <button className="button1" onClick={this.openModal} >주문하기</button>
@@ -114,16 +127,15 @@ class App extends Component {
               <div className='div7'>
                 <br></br>
                 <br></br>
-                <InputPhoneNumber/>
-                <br></br>
-                <Inputname/>
+                <Inputname onDataChange={this.handleInput_nameData}/>
                 <br></br>
                 <Typeofalcohol onDataChange={this.handleAlcohol_typeData} />
                 <br></br>
-                <Quantityofalcohol/>
+                <Quantityofalcohol onDataChange={this.handleAlcohol_numberData}/>
                 <br></br>
-
-                <Inputadress/>
+                <InputPhoneNumber onDataChange={this.handlePhone_numberData}/>
+                <br></br>
+                <Inputadress onDataChange={this.handleInput_addressData}/>
                 <br></br>
               </div>
             </div>
