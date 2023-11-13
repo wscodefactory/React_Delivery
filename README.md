@@ -51,9 +51,11 @@ https://givemesoju-d9d80.firebaseapp.com/?_gl=1*1bbrla5*_ga*NDI0ODI4MTY1LjE2OTgx
 1. 이번 실패의 원인을 피드백 한 후 앞으로 만들어질 새로운 서비스를 더욱 업그레이드 할 예정이다. 
 
 2. 겨울방학이 시작과 동시에 우리는 다시 한번 도전할 것 이다.
-
-
-
+<BR/>
+<BR/>
+<BR/>
+<BR/>
+<BR/>
 참여개발자 및 기획 : 유웅선(WSCODEFACTORY), 박주환(jkworldchampion )
 
 # - WSCODEFACTORY is still in operation. -
