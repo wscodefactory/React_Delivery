@@ -54,6 +54,6 @@ https://givemesoju-d9d80.firebaseapp.com/?_gl=1*1bbrla5*_ga*NDI0ODI4MTY1LjE2OTgx
 
 
 
-
+참여개발자 및 기획 : 유웅선(WSCODEFACTORY), 박주환(jkworldchampion )
 
 # - WSCODEFACTORY is still in operation. -
